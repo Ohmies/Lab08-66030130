@@ -1,0 +1,5 @@
+dependencies:
+   display_component:
+    git: https://github.com/Ohmies/esp32-display-component.git
+   sensor_component:
+    git: https://github.com/PhumAkrthum/sensor.git

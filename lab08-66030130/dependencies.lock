@@ -1,0 +1,27 @@
+dependencies:
+  display_component:
+    component_hash: e61fe1209302ef422ec85ba7f10f1131bcd9f88c8e8d8ab1b18cf636e4e7b900
+    dependencies: []
+    source:
+      git: https://github.com/Ohmies/esp32-display-component.git
+      path: .
+      type: git
+    version: 41cf8f4893a07960133a2edc4d9070eaf6d5d745
+  idf:
+    source:
+      type: idf
+    version: 5.4.2
+  sensor_component:
+    component_hash: e7bbe7340454e25b913aca67c7961ff2373fc577179895cfb49e2de08d47df46
+    dependencies: []
+    source:
+      git: https://github.com/PhumAkrthum/sensor.git
+      path: .
+      type: git
+    version: 94ed483399b08393be1da7a4b9a6931125f45238
+direct_dependencies:
+- display_component
+- sensor_component
+manifest_hash: 2ea146b65da2e95d72061ca91f9c49ea65c27360e9393c40b473eb622cef52fb
+target: esp32
+version: 2.0.0
