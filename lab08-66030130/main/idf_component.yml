@@ -3,3 +3,5 @@ dependencies:
     git: https://github.com/Ohmies/esp32-display-component.git
    sensor_component:
     git: https://github.com/PhumAkrthum/sensor.git
+   led_component:
+    git: https://github.com/Suwaphat04/Lab08-LED-Components.git

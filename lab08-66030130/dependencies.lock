@@ -11,6 +11,14 @@ dependencies:
     source:
       type: idf
     version: 5.4.2
+  led_component:
+    component_hash: 32494f97b4849ab642df71c7814ed795d979b3955fcf0412bc1bf4f516e8d23c
+    dependencies: []
+    source:
+      git: https://github.com/Suwaphat04/Lab08-LED-Components.git
+      path: .
+      type: git
+    version: 4949449e26db091557b68a56aef134d2f6a20bb9
   sensor_component:
     component_hash: e7bbe7340454e25b913aca67c7961ff2373fc577179895cfb49e2de08d47df46
     dependencies: []
@@ -21,7 +29,8 @@ dependencies:
     version: 94ed483399b08393be1da7a4b9a6931125f45238
 direct_dependencies:
 - display_component
+- led_component
 - sensor_component
-manifest_hash: 2ea146b65da2e95d72061ca91f9c49ea65c27360e9393c40b473eb622cef52fb
+manifest_hash: 3c639c1b131cf8b42ff5b268ddb15ca2aae57bb36430a259922f6d319121fb9f
 target: esp32
 version: 2.0.0

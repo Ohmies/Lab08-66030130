@@ -4,17 +4,19 @@
 #include "esp_log.h"
 #include "sensor.h"
 #include "display.h"
+#include "led.h"
 
 static const char *TAG = "LAB7-3";
 
 void app_main(void)
 {
-    ESP_LOGI(TAG, "� Lab 7-3: Custom Components Demo (sensor + display) Started");
+    ESP_LOGI(TAG, "🚀 Lab 7-3: Custom Components Demo (sensor + display + led) Started");
     ESP_LOGI(TAG, "📦 Using components created with idf.py create-component");
 
     // เริ่มต้น components
     sensor_init();
     display_init();
+    led_init();
 
     int reading_count = 0;
 
@@ -36,18 +38,21 @@ void app_main(void)
         // แสดงข้อมูลผ่าน display component
         display_show_sensor_data(temp, hum, heat_index);
 
-        // แสดงสถานะตามค่า Heat Index
+        // แสดงสถานะ + ควบคุม LED ตามค่า Heat Index
         if (heat_index < 80)
         {
             display_show_status("✅ Comfortable");
+            led_off();
         }
         else if (heat_index < 90)
         {
             display_show_status("⚠️  Caution");
+            led_toggle(); // กระพริบๆ แบบสุ่มตามรอบ loop
         }
         else
         {
             display_show_status("🚨 Warning");
+            led_on(); // เปิดไฟ LED ค้างเตือน
         }
 
         ESP_LOGI(TAG, "==========================================");
